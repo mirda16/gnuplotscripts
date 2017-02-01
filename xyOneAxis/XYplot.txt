@@ -1,0 +1,26 @@
+# This file plots one x axis and y axis. The name of the chart is 
+# XYplot and xlabel is frequency and ylabel is reflection coefficient
+# 
+set key font ",12" right
+set key inside
+
+set title "XYplot" font ",15"
+
+set style line 100 lt 1 lc rgb "black" lw 1
+
+set grid lc rgb "black" lw 1 lt 0
+set style data lines
+
+set xlabel "frequency [GHz]" font ",15" 
+set xtics 1 font ",15"  # set tic at the x axis
+set xrange [6:10]  # set x axis range
+
+set ylabel "reflection coefficient [dB]" font ",15" offset -1,0,0
+set ytics 5 font ",15"
+set yrange [-20:0]  # set y axis range
+
+set tics in
+
+
+n = 'test_data.csv'  # name of the data file
+plot n lw 3 lc rgb "red" title 'test_plot'
